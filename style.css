@@ -5,8 +5,33 @@
 }
 
 body{
+    font-family: 'Roboto', sans-serif;
     width: 1024px;
     margin: auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #ddd;
+}
+
+.overlay::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
 }
 
 .clearfix::after{
@@ -15,47 +40,90 @@ body{
     clear: both;
 }
 
+        /* MAIN  */
+
 header .navigation{
     margin-top: 20px;
     width: 1024px;
-    min-height: 60px;
-    background-color: plum;
+    height: 60px;
 }
+
+header .navigation{
+    margin: 0 auto;
+}
+
+#logo{
+    padding: 5px;
+    height: 70px;
+    display: block;
+    border-right: 1px solid #ddd;
+}
+
+#menu li{
+    font-size: 16px;
+    padding: 10px;
+    float: left;
+}
+
+a[href]:hover{
+    color: currentColor;
+}
+
+
 
 main .slide{
     position: relative;
-    min-height: 400px;
-    background-color: lightgreen;
-    margin: 20px 0;
-
+    width: 100%;
+    height: 450px;
+    background-image: url(img/banner.jpg);
+    margin: 50px 0;
+    background-size: cover;
+    background-position:center;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .slide__info{
+    color: white;
     position: absolute;
     bottom: 50px;
     left: 70px;
-    width: 300px;
+    width: 500px;
     min-height: 80px;
-    border: 2px dashed black;
+    z-index: 10;
 }
 
-main .description{
-    min-height: 600px;
-    background-color: rgb(46, 79, 185);
+.slide__info h2{
+    font-size: 28px;
 }
+
+.slide__info p{
+    font-size: 15px;
+}
+
 
 .description__row{
     float: left;
     width: 100%;
-    height: 60px;
-    background-color: aqua;
+    font-size: 18px;
+    min-height: 60px;
+}
+
+.description__row span{
+    font-size: 15px;
+    color: #ddd;
 }
 .description__col{
-    margin:20px 10px;
+    margin: 20px 10px;
     width: 20%;
     height: calc(600px - 100px); 
     float: left;
     background-color: aqua;
+}
+
+.image{
+    width: 100%;
+    height: 100px;
 }
 
 .description .description__col:nth-child(3n){
@@ -66,5 +134,4 @@ main .description{
     margin: 10px 0 20px 0;
     min-width: 1024px;
     min-height: 60px;
-    background-color: purple;
 }
