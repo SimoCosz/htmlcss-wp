@@ -42,10 +42,18 @@ a{
 
         /* MAIN  */
 
+header{
+    background-color: white;
+    position: sticky;
+    top:0;
+    z-index: 9999999999;
+    box-shadow: 5px 5px 15px grey;
+    border-radius: 5px;
+}
+
 header .navigation{
-    margin-top: 20px;
     width: 1024px;
-    height: 60px;
+    height: 100px;
 }
 
 header .navigation{
@@ -66,7 +74,7 @@ header .navigation{
 }
 
 a[href]:hover{
-    color: currentColor;
+    color: grey;
 }
 
 
@@ -101,6 +109,9 @@ main .slide{
     font-size: 15px;
 }
 
+.description p{
+    color: grey;
+}
 
 .description__row{
     float: left;
@@ -111,27 +122,70 @@ main .slide{
 
 .description__row span{
     font-size: 15px;
-    color: #ddd;
+    color: grey;
 }
 .description__col{
     margin: 20px 10px;
     width: 20%;
     height: calc(600px - 100px); 
     float: left;
-    background-color: aqua;
 }
 
-.image{
+.description .description__col:nth-child(2){
+    margin-left: 0;
+}
+
+.description .description__col:nth-child(4){
+    margin-right: 0;
+}
+
+.image, .banner, .image2{
+    position: relative;
     width: 100%;
-    height: 100px;
+    height: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+
+.image{
+    position: relative;
+    background-image: url(img/img-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image2{
+    position: relative;
+    background-image: url(img/img-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner{
+    position: relative;
+    background-image: url(img/banner-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner > img{
+    object-fit: contain;
+    object-position: top;
 }
 
 .description .description__col:nth-child(3n){
-    width:calc(60% - 60px); 
+    width:calc(60% - 40px); 
 }
 
 .foot{
+    text-align: center;
     margin: 10px 0 20px 0;
     min-width: 1024px;
     min-height: 60px;
+}
+
+.hearts{
+    color: rgb(139, 27, 7);
 }
