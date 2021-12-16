@@ -101,6 +101,17 @@ main .slide{
     z-index: 10;
 }
 
+.slide.overlay:hover::after{
+    color: black;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.slide, .slide__info:hover{
+    color: black;
+    transition: all 200ms ease-in-out;
+}
+
 .slide__info h2{
     font-size: 28px;
 }
