@@ -142,6 +142,10 @@ main .slide{
     float: left;
 }
 
+.description__col h4{
+    margin: 10px 0;
+}
+
 .description .description__col:nth-child(2){
     margin-left: 0;
 }
